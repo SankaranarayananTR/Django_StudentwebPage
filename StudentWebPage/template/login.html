@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f0f0f0;">
+<h1 style="text-align: center; color: #2e86de; font-size: 36px; font-weight: bold; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); letter-spacing: 2px; text-transform: uppercase; font-style: italic;">{{ msg }}</h1>
+<form action="" method="POST" style="width: 300px; margin: 0 auto; background-color: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+    {% csrf_token %}
+    <h1 align="center" style="font-family: 'Times New Roman', serif;">Welcome To Login Page</h1>
+    <table align="center">
+        <tr>
+            <td>Username: </td>
+            <td><input type="text" name="txtUsername" style="width: 100%; padding: 10px; margin: 5px 0; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box;"></td>
+        </tr>
+        <tr>
+            <td>Password: </td>
+            <td><input type="password" name="txtpwd" style="width: 100%; padding: 10px; margin: 5px 0; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box;"></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center"><input type="submit" name="btnsubmit" value="Login" style="background-color: #e74c3c; color: white; cursor: pointer; width: 100%; padding: 10px; margin: 5px 0; border: none; border-radius: 5px; box-sizing: border-box;"></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="right"><a href="{% url 'reg' %}" style="text-decoration: none; color: #2e86de;">Create account</a></td>
+        </tr>
+    </table>
+</form>
+<script>
+    // JavaScript functions
+    document.addEventListener("DOMContentLoaded", function () {
+        // You can add your JavaScript code here
+    });
+</script>
+</body>
+</html>

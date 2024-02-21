@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+    <style>
+        /* CSS styles */
+        body {
+            font-family: Arial, sans-serif; /* Example font */
+            background-color: #f8f9fa; /* Light grey background */
+            color: #333; /* Dark text color */
+        }
+
+        .navbar {
+            background-color: #343a40; /* Dark grey navbar */
+        }
+
+        .navbar-brand,
+        .nav-item a {
+            color: #fff !important; /* White text color for navbar elements */
+            font-size: 18px; /* Font size for navbar elements */
+        }
+
+        .navbar-brand:hover,
+        .nav-item a:hover {
+            color: #ccc !important; /* Light grey hover color for navbar elements */
+        }
+
+        .nav-item {
+            margin-right: 10px; /* Spacing between navbar items */
+        }
+
+        .nav-item:last-child {
+            margin-right: 0; /* Remove margin from last navbar item */
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="">StudentManagement</a>
+        </div>
+
+        <ul class="nav navbar-nav">
+            <li class="nav-item"><a href="{% url 'home' %}">Home</a></li>
+            <li class="nav-item" ><a href="{% url 'addstudent' %}">AddStudent</a></li>
+            <li class="nav-item"><a href="{% url 'displaystudent' %}">DisplayStudent </a></li>
+            <li class="nav-item"><a href="{% url 'add_course' %}">AddCourse</a></li>
+            <li class="nav-item"><a href="{% url 'display_course' %}">DisplayCourse </a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="nav-item"><a href="{% url 'logout' %}"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+        </ul>
+
+    </div>
+</nav>
+{% block content %}
+
+{% endblock %}
+</body>
+</html>

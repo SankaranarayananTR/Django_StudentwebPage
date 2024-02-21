@@ -1,0 +1,32 @@
+{% extends 'adminnavbar.html' %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <style>
+        /* CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+            font-family: 'Roboto', sans-serif; /* Example of using Google Fonts */
+        }
+    </style>
+</head>
+<body>
+<h2 align="center">Welcome {{ data }} To Home Page</h2>
+<script>
+    // JavaScript functions
+    document.addEventListener("DOMContentLoaded", function () {
+        // You can add your JavaScript code here
+    });
+</script>
+</body>
+</html>
+{% endblock %}
